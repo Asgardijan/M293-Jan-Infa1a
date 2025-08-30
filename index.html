@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tony's Elektro Schuppen</title>
-    <link rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony's Elektro Schuppen</title>
+  <link rel="stylesheet" href="styles.css">
+ 
 </head>
 <body>
-  <header>
-    <h2>Tony's Elektro<br>Schuppen</br> </h2>
-    <a href="smartphones.html">Smartphones</a>
-    <a href="tablets.html">Tablets</a>
-    <a href="laptops.html">Laptops</a>
-    <a href="kontakt.html">Kontakt</a>
-  </header>
+<header>
+  <div class="header-container">
+    <div class="header-title">
+      <a href="index.html">TONY'S ELEKTRO <br> SCHUPPEN</a>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="Devices/Smartphones.html">Smartphones</a></li>
+        <li><a href="Devices/Tablets.html">Tablets</a></li>
+        <li><a href="Devices/Laptops.html">Laptops</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <section>
-    <h1 style="font-size:60px;">Willkommen zu Tony's Elektro Schuppen</h1>
-  </section> 
 
-    <img src="assets/tony's pizza schuppen.png">
-    <img src="assets/smartphone.webp">
-    <p> <a href="smartphones.html">Smartphones</a></p>
-    <img src="assets/tablet.webp">
-    <p> <a href="tablets.html">Tablets</a></p>
-    <img src="assets/laptop.webp">
-    <p> <a href="laptops.html">Laptops</a></p>
-  </body>
+<section id="main-section">
+  <h1>Welcome to Tony's Elektro Schuppen</h1>
+  <img id="MAINIMAGE" src="assets/tony's pizza schuppen.png" alt="Tony's Elektro Schuppen">
+</section>
 
-  <footer>
-    <h4>Öffnungszeiten</h4>
-    <p>Mo - Do: 11 - 18:30 Uhr</p>
-    <p>Fr - Sa: 11 - 17:00 Uhr</p>
-    <p>So: geschlossen</p>
-    <p>"Bei Tony's Elektroschuppen geht es nicht nur um<br>Geräte sondern um die Menschen dahinter: Ich<br>liebe es, ihnen die Technik zu zeigen, die ihr Leben bereichert."<br>- Tony</p>
-    <h4>Adresse</h4>
-    <p>Tony's Elektro Schuppen</p>
-    <p>Musterstrasse 22</p>
-    <p>6456 Musterhausen</p>
-  </footer>
+<section class="link-section">
+  <section id="smartphones">
+    <a href="Devices/Smartphones.html">
+      <img src="assets/smartphone.webp" alt="Smartphone">
+      <p>Smartphones</p>
+    </a>
+  </section>
+
+  <section id="tablets">
+    <a href="Devices/Tablets.html">
+      <img src="assets/tablet.webp" alt="Tablet">
+      <p>Tablets</p>
+    </a>
+  </section>
+  
+  <section id="laptops">
+    <a href="Devices/Laptops.html">
+      <img src="assets/laptop.webp" alt="Laptop">
+      <p>Laptops</p>
+    </a> 
+  </section>
+</section>
+
+<footer>
+  <nav class="footer-container">
+    <div class="footer-left">
+      <b>Öffnungszeiten</b><br>
+      Mo - Do: 11 - 18:30 Uhr<br>
+      Fr - Sa: 11 - 17:00 Uhr<br>
+      So: geschlossen
+    </div>
+
+    <div class="footer-center">
+      <p>"Bei Tony's Elektro Schuppen geht es nicht nur um Geräte, sondern um die Menschen dahinter: Ich liebe es, ihnen die Technik zu zeigen, die ihr Leben bereichert."<br>– Tony</p>
+    </div>
+
+    <div class="footer-right">
+      <b>Adresse</b><br>
+      Tony's Elektro Schuppen<br>
+      Musterstrasse 22<br>
+      6456 Musterhausen
+    </div>
+  </nav>
+</footer>
 </body>
 </html>

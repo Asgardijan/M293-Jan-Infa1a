@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tony's Elektro Schuppen</title>
+  <title>Kontakt – Tony's Elektro Schuppen</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <header>
-    <h2>Tony's Elektro<br>Schuppen</br> </h2>
-    <a href="smartphones.html">Smartphones</a>
-    <a href="tablets.html">Tablets</a>
-    <a href="laptops.html">Laptops</a>
-    <a href="kontakt.html">Kontakt</a>
+    <ul>
+      <li><a href="index.html">Tony's Elektro Schuppen</a></li>
+      <li><a href="Devices/Smartphones.html">Smartphones</a></li>
+      <li><a href="Devices/Tablets.html">Tablets</a></li>
+      <li><a href="Devices/Laptops.html">Laptops</a></li>
+      <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
   </header>
-  <section>
-    <h1 style="font-size:60px;">Kontakt</h1>
-  </section> 
 
-  <p>Dein Name</p>
-  <p>E-Mail</p>
-  <p>Nachricht</p>
-  <p>Was denkst du über<br>unsere Preise?</p>
-  <p>super fair</p>
-  <p>okay</p>
-  <p>teuer</p>
-  
+  <main>
+    <h1>Kontakt</h1>
 
-  
+    <form action="#" method="post">
+      <label for="name">Dein Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">E-Mail:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="nachricht">Nachricht:</label><br>
+      <textarea id="nachricht" name="nachricht" rows="6" cols="40" required></textarea><br><br>
+
+      <fieldset>
+      <legend><strong>Was denkst du über unsere Preise?</strong></legend>
+      <input type="radio" id="superfair" name="preise" value="super fair" checked>
+      <label for="superfair">super fair</label><br>
+
+      <input type="radio" id="okay" name="preise" value="okay">
+      <label for="okay">okay</label><br>
+
+      <input type="radio" id="teuer" name="preise" value="teuer">
+      <label for="teuer">teuer</label><br><br>
+      </fieldset>
+
+      <button type="submit">Absenden</button>
+    </form>
+  </main>
+
   <footer>
-    <h4>Öffnungszeiten</h4>
-    <p>Mo - Do: 11 - 18:30 Uhr</p>
-    <p>Fr - Sa: 11 - 17:00 Uhr</p>
-    <p>So: geschlossen</p>
-    <p>"Bei Tony's Elektroschuppen geht es nicht nur um<br>Geräte sondern um die Menschen dahinter: Ich<br>liebe es, ihnen die Technik zu zeigen, die ihr Leben bereichert."<br>- Tony</p>
-    <h4>Adresse</h4>
-    <p>Tony's Elektro Schuppen</p>
-    <p>Musterstrasse 22</p>
-    <p>6456 Musterhausen</p>
+    <nav>
+      <b>Öffnungszeiten</b> <br> Mo - Do: 11 - 18:30 Uhr <br> Fr - Sa: 11 - 17:00 Uhr <br> So: geschlossen
+      <p>"Bei Tony's Elektro Schuppen geht es nicht nur um Geräte, sondern um die Menschen dahinter: Ich liebe es, ihnen die Technik zu zeigen, die ihr Leben bereichert." <br> -Tony</p>
+      <b>Adresse</b> <br> Tony's Elektro Schuppen <br> Grundrebenstrasse 109 <br> 8932 Mettmenstetten
+    </nav>
   </footer>
 </body>
 </html>
