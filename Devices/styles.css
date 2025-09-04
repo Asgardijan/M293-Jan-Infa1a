@@ -29,6 +29,7 @@ body {
   width: 50%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 #main-section h1 {
@@ -129,39 +130,59 @@ header a {
   color: #fff;
 }
 
-.link-section {
+.link-section
+{
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;  
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-
-.link-section a {
-  display: block;
-  flex-basis: 1/3;
+.link-section img
+{
+  width: auto;  
+  max-width: 150px;
+  height: auto;
 }
-
-#smartphones img {
-  aspect-ratio: 16 / 9;
-  width: 50%;
+.link-item img
+{
+  border: 2px solid #000000;   /* single line border */
+  border-radius: 8px;       /* optional rounded corners */
+  padding: 15px;
+  text-align: center;
+  max-width: 200px;         /* controls card width */
+  background: #fff;         /* keep background clean */
 }
-
-#smartphones a {
+.link-item a
+{
+   text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers both img + text */
+}
+.link-item p
+{
+  margin-top: 10px;
+  font-weight: bold;
   text-align: center;
 }
 
-#tablets img {
-  aspect-ratio: 16 / 9;
-  width: 50%;
+/* reusable */
+.container {
+  max-width: 1200px;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
-#tablets a {
-  text-align: center;
+/* class="container" */
+
+.lined {
+  text-decoration: underline;
 }
 
-#laptops img {
-  aspect-ratio: 16 / 9;
-  width: 50%;
-}
-
-#laptops a {
-  text-align: center;
+#contact{
+  display: flex;
+  justify-content: center;
 }
