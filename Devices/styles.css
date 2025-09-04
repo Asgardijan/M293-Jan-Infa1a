@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
    font-family: "Inter";
   src: url("assets/fonts/Inter-VariableFont_opsz\,wght.ttf");
 }
@@ -29,7 +29,6 @@ body {
   width: 50%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 #main-section h1 {
@@ -130,59 +129,39 @@ header a {
   color: #fff;
 }
 
-.link-section
-{
+.link-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;  
-  margin-top: 40px;
-  margin-bottom: 40px;
+  justify-content: space-around;
 }
-.link-section img
-{
-  width: auto;  
-  max-width: 150px;
-  height: auto;
+
+.link-section a {
+  display: block;
+  flex-basis: 1/3;
 }
-.link-item img
-{
-  border: 2px solid #000000;   /* single line border */
-  border-radius: 8px;       /* optional rounded corners */
-  padding: 15px;
-  text-align: center;
-  max-width: 200px;         /* controls card width */
-  background: #fff;         /* keep background clean */
+
+#smartphones img {
+  aspect-ratio: 16 / 9;
+  width: 50%;
 }
-.link-item a
-{
-   text-decoration: none;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centers both img + text */
-}
-.link-item p
-{
-  margin-top: 10px;
-  font-weight: bold;
+
+#smartphones a {
   text-align: center;
 }
 
-/* reusable */
-.container {
-  max-width: 1200px;
-  padding: 20px 0;
-  margin: 0 auto;
+#tablets img {
+  aspect-ratio: 16 / 9;
+  width: 50%;
 }
 
-/* class="container" */
-
-.lined {
-  text-decoration: underline;
+#tablets a {
+  text-align: center;
 }
 
-#contact{
-  display: flex;
-  justify-content: center;
+#laptops img {
+  aspect-ratio: 16 / 9;
+  width: 50%;
+}
+
+#laptops a {
+  text-align: center;
 }
