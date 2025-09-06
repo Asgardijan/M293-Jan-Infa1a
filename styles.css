@@ -182,9 +182,78 @@ header a {
   text-decoration: underline;
 }
 
-#contact{
+/* === Contact === */
+#Form {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+  align-items: center;      
+  min-height: 100vh;        
+  background: #f9f9f9;
+  padding: 20px;      
+}
+ 
+.Form-child {
+  display: flex;
+  flex-direction: column;  
+  gap: 10px;                
+  width: 60%;              
+  padding: 30px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+ 
+.Form-child label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+ 
+.Form-child input,
+.Form-child textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+ 
+.Form-child fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.Form-child legend {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+ 
+.Form-child button {
+  padding: 12px;
+  background: #1a1a8c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+ 
+.Form-child button:hover {
+  background: #3333cc;
+}
+
+#selection {
+  display: flex;
+  flex-direction: column;
+}
+
+#nachricht {
+  resize: none;
 }
 
 @media (max-width: 900px) {
