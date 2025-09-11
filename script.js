@@ -44,3 +44,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         </li>  `
   } 
 });
+
+const GetTabletData = async () => {
+  const response = await fetch('https://dummyjson.com/products/category/tablets');
+  const data2 = await response.json();
+  return data2.products;
+}
+
+const tabletsList = document.getElementById('products-list');
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const tablets = await GetTabletData(); 
+
+  for (let i = 0; i < tablets.length; i++) {
+    const tablet = tablets[i]; 
+    
+        tabletsList.innerHTML = tabletsList.innerHTML + `
+      <li class="product-card">
+        <img class="product-image" src="${tablet.images[0]}" alt="Bild von ${tablet.title}">
+        <h2 class="product-title">${tablet.title}</h2>
+        <p class="product-price">${tablet.price} CHF</p>
+        <p class="product-description">
+          ${tablet.description}
+        </p>
+        <button class="cart-button">
+          <img src="../assets/cart.png" alt="In den Warenkorb" />
+        </button>
+      </li>`
+}
+});
