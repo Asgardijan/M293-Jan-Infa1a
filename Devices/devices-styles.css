@@ -48,6 +48,7 @@ body {
 header {
   background-color: var(--primary-color);
   padding: 40px 40px;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
 }
 
 .header-container {
@@ -90,6 +91,7 @@ footer {
   color: var(--light-text);
   padding: 10px;
   text-align: center;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
 }
 
 .footer-container {
