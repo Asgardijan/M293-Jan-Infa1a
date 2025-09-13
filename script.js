@@ -13,7 +13,9 @@ button?.addEventListener("click", () => {
   alert("Konnte nicht gesendet werden!");
 })
 
-/*Fetching für Devices*/
+//Fetching für Devices
+
+//Smartphones
 
 const GetSmartphoneData = async () => {
   const response = await fetch('https://dummyjson.com/products/category/smartphones');
@@ -21,7 +23,7 @@ const GetSmartphoneData = async () => {
   return data.products;
 }
 
-const smartphoneList = document.getElementById('products-list');
+const smartphoneList = document.getElementById('smartphones-list');
 
 document.addEventListener('DOMContentLoaded', async () => {
     const smartphones = await GetSmartphoneData();
@@ -51,7 +53,7 @@ const GetTabletData = async () => {
   return data2.products;
 }
 
-const tabletsList = document.getElementById('products-list');
+const tabletsList = document.getElementById('tablets-list');
 
 document.addEventListener('DOMContentLoaded', async () => {
   const tablets = await GetTabletData(); 

@@ -3,6 +3,12 @@
   src: url("assets/fonts/Inter-VariableFont_opsz\,wght.ttf");
 }
 
+:root {
+  --primary-color: #24198c;
+  --light-text: #fff;
+  --dark-text: #000;
+}
+
 *,
 *::before
 *::after
@@ -36,11 +42,11 @@ body {
   padding-top: 20px;
   font-weight: bold;
   font-size: 40px;
-  align-items: center;
+  text-align: center;
 }
 
 header {
-  background-color: #24198c;
+  background-color: var(--primary-color);
   padding: 40px 40px;
 }
 
@@ -51,7 +57,7 @@ header {
 }
 
 .header-title a {
-  color: #fff;
+  color: var(--light-text);
   font-size: 1.3em;
   font-weight: bold;
   text-decoration: none;
@@ -72,7 +78,7 @@ header {
 }
 
 .header-nav a {
-  color: #fff;
+  color: var(--light-text);
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1em;
@@ -80,7 +86,8 @@ header {
 
 
 footer {
-  background-color: #24198c;
+  background-color: var(--primary-color);
+  color: var(--light-text);
   padding: 10px;
   text-align: center;
 }
@@ -90,7 +97,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #24198c;
+  background-color: var(--primary-color);
   gap: 20px;
 }
 
@@ -122,12 +129,12 @@ footer p,
 .footer-left,
 .footer-center,
 .footer-right {
-  color: #fff;
+  color: var(--light-text);
 }
 
 header a {
   text-decoration: none;
-  color: #fff;
+  color: var(--light-text);
 }
 
 .link-section
@@ -147,17 +154,18 @@ header a {
 }
 .link-item img
 {
-  border: 2px solid #000000;   
+  border: 2px solid var(--dark-text);
+ 
   border-radius: 8px;       
   padding: 15px;
   text-align: center;
   max-width: 200px;         
-  background: #fff;         /* clean background */
+  background-color: var(--light-text);         /* clean background */
 }
 .link-item a
 {
    text-decoration: none;
-  color: black;
+  color: var(--dark-text);
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -197,7 +205,6 @@ header a {
 
 #products-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
   list-style: none;
@@ -206,10 +213,11 @@ header a {
 }
 
 .product-card {
-  background-color: #fff;
+  background-color: var(--light-text);
   border-radius: 10px;
   padding: 1rem;
-  border: 2px solid #000;
+  border: 2px solid var(--dark-text);
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -260,4 +268,24 @@ header a {
 .cart-button img:hover {
   transform: scale(1.2);
   transition: transform 0.2s ease;
+}
+
+/*Für Tablet Bildschirme*/
+
+@media (max-width: 900px) {
+  #products-list {
+    grid-template-columns: repeat(2, 1fr); /* Wechselt zu 2 Spalten */
+  }
+}
+
+/* Für Smartphone Bildschirme*/
+@media (max-width: 600px) {
+  #products-list {
+    grid-template-columns: 1fr;  
+    padding: 1rem; 
+  }
+
+  #main-section h1 {
+    font-size: 32px; 
+  }
 }
