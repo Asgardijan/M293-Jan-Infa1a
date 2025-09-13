@@ -50,6 +50,7 @@ body {
 header {
   background-color: var(--primary-color);
   padding: 40px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -266,15 +267,18 @@ header a {
   resize: none;
 }
 
+/* Für Tablet Bildschirme*/
 @media (max-width: 900px) {
-  #products-list {
+  #smartphones-list, #tablets-list, #laptops-list { 
     grid-template-columns: repeat(2, 1fr);
   }
 }
- 
+
+/* Für Smartphone Bildschirme*/
 @media (max-width: 600px) {
-  #products-list {
-    grid-template-columns: 1fr;
+  #smartphones-list, #tablets-list, #laptops-list { 
+    grid-template-columns: 1fr;  
+    padding: 1rem; 
   }
 }
  

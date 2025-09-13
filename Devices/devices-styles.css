@@ -201,10 +201,11 @@ header a {
 
 }
 
-
-
-#products-list {
+#smartphones-list, 
+#tablets-list, 
+#laptops-list {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
   list-style: none;
@@ -270,17 +271,16 @@ header a {
   transition: transform 0.2s ease;
 }
 
-/*Für Tablet Bildschirme*/
-
+/* Für Tablet Bildschirme*/
 @media (max-width: 900px) {
-  #products-list {
-    grid-template-columns: repeat(2, 1fr); /* Wechselt zu 2 Spalten */
+  #smartphones-list, #tablets-list, #laptops-list { 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Für Smartphone Bildschirme*/
 @media (max-width: 600px) {
-  #products-list {
+  #smartphones-list, #tablets-list, #laptops-list { 
     grid-template-columns: 1fr;  
     padding: 1rem; 
   }

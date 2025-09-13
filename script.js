@@ -23,7 +23,7 @@ const GetSmartphoneData = async () => {
   return data.products;
 }
 
-const smartphoneList = document.getElementById('smartphones-list');
+const smartphonesList = document.getElementById('smartphones-list');
 
 document.addEventListener('DOMContentLoaded', async () => {
     const smartphones = await GetSmartphoneData();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (let i = 0; i < smartphones.length; i++) {
         const smartphone = smartphones[i];
         const smartphoneElement = document.createElement('li');
-        smartphoneList.innerHTML = smartphoneList.innerHTML + `
+        smartphonesList.innerHTML = smartphonesList.innerHTML + `
 
         <li class="product-card">
           <img class="product-image" src="${smartphone.images[2]}" alt="Bild von ${smartphone.title}">
@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         </li>  `
   } 
 });
+
+//Tablets
 
 const GetTabletData = async () => {
   const response = await fetch('https://dummyjson.com/products/category/tablets');
@@ -63,11 +65,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     
         tabletsList.innerHTML = tabletsList.innerHTML + `
       <li class="product-card">
-        <img class="product-image" src="${tablet.images[0]}" alt="Bild von ${tablet.title}">
+        <img class="product-image" src="${tablet.images[1]}" alt="Bild von ${tablet.title}">
         <h2 class="product-title">${tablet.title}</h2>
         <p class="product-price">${tablet.price} CHF</p>
         <p class="product-description">
           ${tablet.description}
+        </p>
+        <button class="cart-button">
+          <img src="../assets/cart.png" alt="In den Warenkorb" />
+        </button>
+      </li>`
+}
+});
+
+//Laptops
+
+const GetLaptopData = async () => {
+  const response = await fetch('https://dummyjson.com/products/category/laptops');
+  const data3 = await response.json();
+  return data3.products;
+}
+
+const laptopsList = document.getElementById('laptops-list');
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const laptops = await GetLaptopData(); 
+
+  for (let i = 0; i < laptops.length; i++) {
+    const laptop = laptops[i]; 
+    
+        laptopsList.innerHTML = laptopsList.innerHTML + `
+      <li class="product-card">
+        <img class="product-image" src="${laptop.images[2]}" alt="Bild von ${laptop.title}">
+        <h2 class="product-title">${laptop.title}</h2>
+        <p class="product-price">${laptop.price} CHF</p>
+        <p class="product-description">
+          ${laptop.description}
         </p>
         <button class="cart-button">
           <img src="../assets/cart.png" alt="In den Warenkorb" />
